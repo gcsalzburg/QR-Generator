@@ -5,7 +5,7 @@
 		<script type="text/javascript" src="qrcode.js"></script>
 
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?IBM+Plex+Mono:wght@300&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> 
 
 		<link rel="stylesheet" href="include/styles.css">
 	</head>
@@ -15,22 +15,23 @@
 			<div class="sheet">
 				<header>
 					<img src="include/img/logo_black_square.png" class="logo">
-					<h1>LEGO QR Generator</h1>
+					<h1>LEGO WiFi QR</h1>
 				</header>
 				<section id="intro_info" class="intro_info">
-					<p>This is your instruction set for creating your LEGO QR code. This information is unique to you, scanning this code will automatically request to join your WiFi network.</p>
-					<p>The QR code below can be scanned by the camera app is iOS 14 and above.</p>
+					<p>Congratulations!</p>
+					<p>This is your unique instruction set for creating your own LEGO QR code. With this code, anyone can instantly connect to your WiFi network, no hunting for network names or typing in passwords.</p>
+					<p>Test the QR code below now. It can be scanned by the camera app in iOS 14 and above.</p>
 					<div class="qr_data">
 						<div id="scannable_qr" class="scannable_qr"></div>
 						<table class="qr_data_table nice_table">
 							<tbody>
 								<tr>
 									<td>Network name:</td>
-									<td><span id="network_name">thetownhouse</span></td>
+									<td><span id="network_name" contenteditable="true">thetownhouse</span></td>
 								</tr>
 								<tr>
 									<td>Password:</td>
-									<td><span id="network_password">faradaythec4tLOL!</span></td>
+									<td><span id="network_password" contenteditable="true">faradaythec4tLOL!</span></td>
 								</tr>
 								<tr>
 									<td>Network type</td>
@@ -43,26 +44,16 @@
 							</tbody>
 						</table>
 					</div>
-					<p>The second sheet of this PDF contains an instruction guide for assembling your code. The QR code on this sheet will not scan.</p>
+					<p>The second sheet of this PDF contains an instruction guide for assembling your code. If you need more help, take a look at <a href="https://interactionmagic.com/qr/">https://interactionmagic.com/qr/</a></p>
 					<p>Thanks for your purchase, and happy building!</p>
+					<p>George<br>
+						Founder, Interaction Magic
+					</p>
 				</section>
-				<section class="intro_info">
-					<table class="data_table nice_table">
-						<tbody>
-							<tr>
-								<td>Black bricks needed:</td>
-								<td><span id="black_bricks"></span></td>
-							</tr>
-							<tr>
-								<td>White bricks needed:</td>
-								<td><span id="white_bricks"></span></td>
-							</tr>
-							<tr>
-								<td>Baseplate size</td>
-								<td><span id="baseplate_size"></span></td>
-							</tr>
-						</tbody>
-					</table>
+				<section class="intro_info nerd_data">
+					<p>Technical info about this code:</p>
+					<p>Code generated on: #####</p>
+					<p>Order number: ######</p>
 				</section>
 				<footer>
 					<p>Interaction Magic Ltd<br>
@@ -75,8 +66,43 @@
 				<h2 id="module_count"></h2>
 			</div>
 			<div class="sheet">
-				<p>This sheet designed to be printed in black and white</p>
-				<img src="" id="test_img">
+				<h2>LEGO WiFi QR: Assembly</h2> 
+				<div class="instructions_intro">
+					<section class="instructions">
+						<p>The number of bricks you'll need is shown on the right. We recommend <a href="https://www.bricklink.com/">BrickLink</a> for purchasing in bulk.</p>
+						<p>To make assembly easier, the QR code below has been divided into small chunks. Start with the three target corners and then take your time building it up. Don't worry if you get the odd piece wrong, the QR codes have some error checking built in to cover for mistakes. Have fun!</p> 
+					</section>
+					<table class="data_table nice_table">
+						<tbody>
+							<tr>
+								<td>Network:</td>
+								<td><span id="network_name">thetownhouse</span></td>
+							</tr>
+							<tr>
+								<td>Black bricks:</td>
+								<td><span id="black_bricks"></span></td>
+							</tr>
+							<tr>
+								<td>White bricks:</td>
+								<td><span id="white_bricks"></span></td>
+							</tr>
+							<tr>
+								<td>Baseplate size:</td>
+								<td><span id="baseplate_size"></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="qr_map_image">
+					<img src="" id="test_img">
+				</div>
+				<footer>
+					<p>Interaction Magic Ltd<br>
+						Company no. 13073006 (England & Wales)<br>
+						Cart House 2, Copley Hill Business Park, Cambridge CB22 3GN<br>
+						VAT registration no: GB 367 4047 82
+						</p>
+				</footer>
 			</div>
 		</div>
 		

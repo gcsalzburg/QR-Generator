@@ -2,6 +2,9 @@ html, body{
 	width: 100%;
 	height: 100%;
 }
+a{
+	color:blue;
+}
 body{
 	background-color: rgb(235,238,240);
 	color: #111111;
@@ -88,6 +91,51 @@ footer > p{
 .nice_table tr td:not(:first-of-type){
 	border-left: 1px solid black;
 }
+
+.nerd_data{
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 10px;
+}
+
+.instructions_intro{
+	display: flex;
+	align-items: flex-start;
+}
+
+.instructions{
+	flex-grow: 1;
+	max-width: 55%;
+	margin-right: 5mm;
+}
+h2{
+	font-size: 6mm;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;	 
+	margin-top: 0 0 0.2em 0;
+}
+
+
+.qr_map_image{
+	background: rgb(128,128,128);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1/1;
+	position:relative;
+	z-index: 20;
+}
+.qr_map_image:before{
+	content: "";
+	height: 100%;
+	position: absolute;
+	left: -15mm;
+	right: -15mm;
+	background: rgb(128,128,128);
+	z-index: -10;
+	bottom: 0;
+	top: 0;
+}
+
 
 @page {
 	size: A4 portrait;   /* auto is the initial value */

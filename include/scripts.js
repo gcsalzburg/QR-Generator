@@ -8,16 +8,19 @@ qr.addData('WIFI:S:thetownhouse;T:WPA;P:faradaythec4tLOL!;;');
 qr.make();
 document.getElementById('scannable_qr').innerHTML = qr.createImgTag(10);
 
-let data_string = '';
+let console_data = {
+	error_correction: 'H',
+	bit_array: ''
+};
 const module_count = qr.getModuleCount();
 for(let i=0; i<module_count; i++){
 	for(let j=0; j<module_count; j++){
-		data_string += qr.isDark(i,j) ? '1' : '0';
-		data_string += ';';
+		console_data.bit_array += qr.isDark(i,j) ? '1' : '0';
+		console_data.bit_array += ',';
 	}
 }
-
-//	console.log(data_string);
+console_data.bit_array = console_data.bit_array.slice(0, console_data.bit_array.length - 1)
+console.log(console_data);
 
 // Calculate some data
 document.getElementById("baseplate_size").innerText = `${module_count}x${module_count}`;
@@ -54,7 +57,6 @@ if(number_four_blocks > 1){
 	}
 }
 lines.sort((a,b) => {return a-b;});
-console.log(lines);
 
 // Get canvas object
 let canvas = document.createElement("canvas");
