@@ -1,0 +1,112 @@
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-color: rgb(235,238,240);
+	color: #111111;
+	font-family: "Roboto", sans-serif;
+}
+.sheets{
+	padding: 20px;
+}
+.sheet{
+	width: 210mm;
+	min-height: 297mm;
+	padding: 15mm;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+	box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 8px 0px;
+	border-radius: 3px;
+	background-color: white;
+	color: rgb(26, 26, 26);
+	position: relative;
+}
+
+
+/* Page fluff */
+header{
+	width: 100%;
+	margin: 0;
+	display: flex;
+}
+header > .logo{
+	width: 25mm;
+	height: 25mm;
+}
+header > h1{
+	font-size: 9mm;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	margin: 0;
+	margin-left: 0px;
+	background: black;
+	flex-grow: 1;
+	color: #fff;
+	margin-left: 3mm;
+	line-height: 25mm;
+	padding-left: 6mm;
+}
+
+footer{
+	position: absolute;
+	bottom: 15mm;
+}
+footer > p{
+	font-size: 0.6em;
+	margin: 0;
+}
+
+/* Text and info */
+.intro_info{
+	margin-left: 28mm;
+	font-size: 1.2em;
+}
+
+.qr_data_table{
+	font-size: 0.9em;
+}
+
+.qr_data{
+	display: flex;
+	align-items: center;
+}
+.scannable_qr > img{
+	width: 40mm;
+	height: 40mm;
+}
+
+.nice_table{
+	border-collapse: collapse;
+}
+.nice_table td{
+	padding: 0.4em 0.8em 0.3em 0.4em;
+}
+.nice_table tr:not(:last-of-type){
+	border-bottom: 1px solid black;
+}
+.nice_table tr td:not(:first-of-type){
+	border-left: 1px solid black;
+}
+
+@page {
+	size: A4 portrait;   /* auto is the initial value */
+	margin: 0mm;  /* this affects the margin in the printer settings */
+}
+
+@media print {
+	body {
+		margin: 0;
+		-webkit-print-color-adjust: exact;
+	}
+	.sheets{
+		padding: 0;
+	}
+	.sheet{
+		box-shadow: none;
+		border-radius: 0;
+		margin: 0;
+		float: none;
+		/*page-break-after: always;*/
+	}
+}
