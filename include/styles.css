@@ -123,11 +123,16 @@ h2{
 .editable{
 	min-width: 50px;
 	display: inline-block;
+	outline: none;
 }
-.editable:hover{
+.clickable{
+	display: inline-block;
+	cursor: pointer;
+}
+.editable:hover, .clickable:hover{
 	background: rgb(255, 241, 162);
 }
-.editable:focus{
+.editable:focus, .clickable:focus{
 	background: rgb(203, 247, 84);
 }
 

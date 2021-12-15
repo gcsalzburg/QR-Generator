@@ -9,7 +9,22 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.getElementById("network_password").addEventListener("input",(e) => {
 		generate_qr();
 	});
-	document.getElementById("network_type").addEventListener("input",(e) => {
+	document.getElementById("network_type").addEventListener("click",(e) => {
+		const subs = {
+			"WEP" : "WPA",
+			"WPA" : "WPA2-EAP",
+			"WPA2-EAP" : "nopass",
+			"nopass" : "WEP"
+		};
+		e.target.innerText = subs[e.target.innerText];
+		generate_qr();
+	});
+	document.getElementById("network_hidden").addEventListener("click",(e) => {
+		const subs = {
+			"No" : "Yes",
+			"Yes" : "No"
+		};
+		e.target.innerText = subs[e.target.innerText];
 		generate_qr();
 	});
 
@@ -22,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		myQR.generate(
 			document.getElementById("network_name").innerText,
 			document.getElementById("network_password").innerText,
-			document.getElementById("network_type").innerText);
+			document.getElementById("network_type").innerText,
+			document.getElementById("network_hidden").innerText);
 		myQR.debug();
 		document.getElementById("baseplate_size").innerText = `${myQR.qrData.width}x${myQR.qrData.width}`;
 		document.getElementById("black_bricks").innerText = `${myQR.qrData.black}`;

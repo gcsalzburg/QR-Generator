@@ -19,8 +19,8 @@ class LegoQR{
 	
 	constructor() {	}
 
-	generate(network_name, password, network_type){
-		this.qrData.wifiString = `WIFI:S:${network_name};T:${network_type};P:${password};;`;
+	generate(network_name, password, network_type, is_hidden){
+		this.qrData.wifiString = `WIFI:S:${network_name};T:${network_type};P:${password};${(is_hidden == "Yes") ? "H:true" : ""};`;
 
 		this.qr = qrcode(this.qrData.typeNumber, this.qrData.errorCorrectionLevel);
 		this.qr.addData(this.qrData.wifiString);
