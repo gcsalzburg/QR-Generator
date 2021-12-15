@@ -125,7 +125,10 @@ h2{
 	display: inline-block;
 }
 .editable:hover{
-	background: rgb(255, 234, 112);
+	background: rgb(255, 241, 162);
+}
+.editable:focus{
+	background: rgb(203, 247, 84);
 }
 
 .qr_map_image{
