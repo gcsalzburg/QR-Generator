@@ -12,18 +12,23 @@ body{
 }
 .sheets{
 	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .sheet{
 	width: 210mm;
 	min-height: 297mm;
 	padding: 15mm;
 	box-sizing: border-box;
+	margin-right: 20px;
 	margin-bottom: 40px;
-	box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 8px 0px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 14px 18px 0px;
 	border-radius: 3px;
 	background-color: white;
 	color: rgb(26, 26, 26);
 	position: relative;
+	flex-shrink: 0;
 }
 
 
@@ -115,6 +120,14 @@ h2{
 }
 
 
+.editable{
+	min-width: 50px;
+	display: inline-block;
+}
+.editable:hover{
+	background: rgb(255, 234, 112);
+}
+
 .qr_map_image{
 	background: rgb(128,128,128);
 	display: flex;
@@ -149,6 +162,7 @@ h2{
 	}
 	.sheets{
 		padding: 0;
+		display: block;
 	}
 	.sheet{
 		box-shadow: none;
