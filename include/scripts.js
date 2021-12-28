@@ -51,6 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.getElementById("baseplate_size").innerText = `${myQR.qrData.width}x${myQR.qrData.width}`;
 		document.getElementById("black_bricks").innerText = `${myQR.qrData.black}`;
 		document.getElementById("white_bricks").innerText = `${myQR.qrData.white}`;
+
+		// Update links
+		document.getElementById("white_brick_link").href = `https://www.bricklink.com/v2/catalog/catalogitem.page?P=3024#T=S&C=1&O={%22color%22:1,%22minqty%22:%22${myQR.qrData.white}%22,%22iconly%22:1}`;
+		document.getElementById("black_brick_link").href = `https://www.bricklink.com/v2/catalog/catalogitem.page?P=3024#T=S&C=11&O={%22color%22:1,%22minqty%22:%22${myQR.qrData.black}%22,%22iconly%22:1}`;
+		const link_baseplate = `https://www.bricklink.com/`;
+
+		// Baseplate sizes
+		if(myQR.qrData.width <= 32){
+			document.getElementById("baseplate_link").href = `https://www.bricklink.com/v2/catalog/catalogitem.page?P=3811#T=S&C=1&O={%22color%22:1,%22minqty%22:%221%22,%22iconly%22:1}`;
+			document.getElementById("baseplate_part_code").innerText = "3811";
+		}else{
+			document.getElementById("baseplate_link").href = `https://www.bricklink.com/v2/catalog/catalogitem.page?P=4186#T=S&C=1&O={%22color%22:1,%22minqty%22:%221%22,%22iconly%22:1}`;
+			document.getElementById("baseplate_part_code").innerText = "4186";
+		}
 		
 		myQR.create_img_tag(document.getElementById('scannable_qr'));
 		document.getElementById("test_img").src = myQR.render_instructions();

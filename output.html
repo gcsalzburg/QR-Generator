@@ -30,7 +30,9 @@
 				<section id="intro_info" class="intro_info">
 					<p>Congratulations!</p>
 					<p>This is your unique instruction set for creating your own LEGO QR code. With this code, anyone can instantly connect to your WiFi network, no hunting for network names or typing in passwords.</p>
-					<p>Test the QR code below now. It can be scanned by the camera app in iOS 14 and above.</p>
+					<p>Test the QR code below now!</p>
+					<p>It can be scanned by the camera app in iOS 14 and above. Disconnect from your wifi network first to check that it can join it successfully.</p>
+					<p>If you have any problems please contact <a href="mailto:sales@interactionmagic.com">sales@interactionmagic.com</a></p>
 					<div class="qr_data">
 						<div id="scannable_qr" class="scannable_qr"></div>
 						<table class="qr_data_table nice_table">
@@ -54,7 +56,7 @@
 							</tbody>
 						</table>
 					</div>
-					<p>The second sheet of this PDF contains an instruction guide for assembling your code. If you need more help, take a look at <a href="https://interactionmagic.com/qr/">https://interactionmagic.com/qr/</a></p>
+					<p>Details instructions and assembly information is on the following sheets.</p>
 					<p>Thanks for your purchase, and happy building!</p>
 					<p>George<br>
 						Founder, Interaction Magic
@@ -62,8 +64,8 @@
 				</section>
 				<section class="intro_info nerd_data">
 					<p>Technical info about this code:</p>
-					<p>Code generated on: #####</p>
-					<p>Order number: ######</p>
+					<p>Order number: ######<br>
+						Build number: ######</p>
 				</section>
 				<footer>
 					<p>Interaction Magic Ltd<br>
@@ -71,47 +73,56 @@
 						Cart House 2, Copley Hill Business Park, Cambridge CB22 3GN<br>
 						VAT registration no: GB 367 4047 82
 						</p>
+						<p class="page_number">1</p>
 				</footer>
 
 				<h2 id="module_count"></h2>
 			</div>
+
 			<div class="sheet">
-				<h2>LEGO WiFi QR: Assembly</h2> 
-				<div class="instructions_intro">
-					<section class="instructions">
-						<p>The number of bricks you'll need is shown on the right. We recommend <a href="https://www.bricklink.com/">BrickLink</a> for purchasing in bulk.</p>
-						<p>To make assembly easier, the QR code below has been divided into small chunks. Start with the three target corners and then take your time building it up. Don't worry if you get the odd piece wrong, the QR codes have some error checking built in to cover for mistakes. Have fun!</p> 
-					</section>
-					<table class="data_table nice_table">
-						<tbody>
-							<tr>
-								<td>Network:</td>
-								<td><span id="network_name">thetownhouse</span></td>
-							</tr>
-							<tr>
-								<td>Black bricks:</td>
-								<td><span id="black_bricks"></span></td>
-							</tr>
-							<tr>
-								<td>White bricks:</td>
-								<td><span id="white_bricks"></span></td>
-							</tr>
-							<tr>
-								<td>Baseplate size:</td>
-								<td><span id="baseplate_size"></span></td>
-							</tr>
-						</tbody>
-					</table>
+				<h2>Assembly Overview</h2> 
+				<p>Here's a parts list for your QR code:</p>
+				<div class="parts_summary">
+					<div class="part">
+						<img src="include/img/brick-black.png">
+						<dl>
+							<dt class="part_name">Black bricks</dt>
+							<dd class="part_value" id="black_bricks"></dd>
+						<!--	<dd class="part_shop">BrickLink shop: <a href="#">#3024</a></dd> -->
+						</dl>
+					</div>
+					<div class="part">
+						<img src="include/img/brick-white.png">
+						<dl>
+							<dt class="part_name">White bricks</dt>
+							<dd class="part_value is_white_part" id="white_bricks"></dd>
+						<!--	<dd class="part_shop">BrickLink shop: <a href="#">#3024</a></dd> -->
+						</dl>
+					</div>
+					<div class="part">
+						<img src="include/img/baseplate.png">
+						<dl>
+							<dt class="part_name">Baseplate size</dt>
+							<dd class="part_value is_white_part" id="baseplate_size"></dd>
+						<!--	<dd class="part_shop">BrickLink shop: <a href="#">#3024</a></dd> -->
+						</dl>
+					</div>
 				</div>
+				<p>We recommend BrickLink for purchasing cheaply in bulk. Here are the direct links for: <a id="black_brick_link" href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3024#T=S&C=11&O={%22color%22:%2211%22,%22iconly%22:1}" target="_blank">black bricks</a> (#3024), <a id="white_brick_link" href="https://www.bricklink.com/v2/catalog/catalogitem.page?P=3024#T=S&C=1&O={%22color%22:1,%22iconly%22:1}" target="_blank">white bricks</a> (#3024) and the nearest <a id="baseplate_link" href="https://www.bricklink.com/catalogList.asp?catType=P&catString=2" target="_blank">baseplate size</a> (#<span id="baseplate_part_code">xxxx</span>).</p>
+				<p>The reference image below will help you build the QR code. Dividing lines are added as a guide during construction.</p>
 				<div class="qr_map_image">
 					<img src="" id="test_img">
 				</div>
 				<footer>
-					<p>Interaction Magic Ltd<br>
-						Company no. 13073006 (England & Wales)<br>
-						Cart House 2, Copley Hill Business Park, Cambridge CB22 3GN<br>
-						VAT registration no: GB 367 4047 82
-						</p>
+						<p class="page_number">2</p>
+				</footer>
+			</div>
+			
+			<div class="sheet">
+				<h2>Assembly hints</h2> 
+				<p>To make assembly easier, the QR code below has been divided into small chunks. Start with the three target corners and then take your time building it up. Don't worry if you get the odd piece wrong, the QR codes have some error checking built in to cover for mistakes. Have fun!</p> 
+				<footer>
+						<p class="page_number">3</p>
 				</footer>
 			</div>
 		</div>

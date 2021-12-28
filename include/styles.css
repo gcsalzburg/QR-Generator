@@ -28,6 +28,7 @@ body{
 	color: rgb(26, 26, 26);
 	position: relative;
 	flex-shrink: 0;
+	overflow: hidden;
 }
 
 .a4 .sheet{
@@ -90,11 +91,27 @@ header > h1{
 
 footer{
 	position: absolute;
-	bottom: 15mm;
+	inset: auto 15mm 15mm 15mm;
+	z-index: 100;
 }
 footer > p{
 	font-size: 0.6em;
 	margin: 0;
+}
+footer p.page_number{
+	position: absolute;
+	inset: auto 0 0 auto;
+	font-size: 1em;
+	font-weight: 700;
+	background: black;
+	width: 8mm;
+	height: 8mm;
+	color: white;
+	text-align: center;
+	line-height: 8mm;
+}
+.sheet:first-of-type footer{
+	margin-left: 28mm;
 }
 
 /* Text and info */
@@ -134,16 +151,6 @@ footer > p{
 	font-size: 10px;
 }
 
-.instructions_intro{
-	display: flex;
-	align-items: flex-start;
-}
-
-.instructions{
-	flex-grow: 1;
-	max-width: 55%;
-	margin-right: 5mm;
-}
 h2{
 	font-size: 6mm;
 	font-family: "Poppins", sans-serif;
@@ -151,6 +158,52 @@ h2{
 	margin-top: 0 0 0.2em 0;
 }
 
+/* List of parts needed */
+.parts_summary{
+	display:flex;
+	margin-bottom: 5mm;
+}
+.part{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.part img{
+	width: 14mm;
+	height: 14mm;
+}
+.part dl{
+	display: block;
+	margin: 0;
+	padding: 0 5mm;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.part dt{
+	display: inline-block;
+	margin: 0.3em 0 0.1em;
+}
+.part_value{
+	display: inline-block;
+	font-weight: 500;
+	background: black;
+	color: white;
+	padding: 0.15em 0.4em;
+	margin: 0.2em 0;
+	border-radius: 0.5em;
+}
+.part_value.is_white_part{
+	background: hsl(0, 0%, 90%);
+	color:black;
+}
+.part_shop{
+	margin: 0.4em 0 0 0;
+	padding: 0;
+	font-size: 0.6em;
+}
 
 .editable{
 	min-width: 50px;
@@ -179,13 +232,12 @@ h2{
 }
 .qr_map_image:before{
 	content: "";
-	height: 100%;
 	position: absolute;
 	left: -15mm;
 	right: -15mm;
 	background: rgb(128,128,128);
 	z-index: -10;
-	bottom: 0;
+	bottom: -30mm;
 	top: 0;
 }
 
