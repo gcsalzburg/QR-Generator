@@ -3,6 +3,14 @@
 // When page loads
 document.addEventListener("DOMContentLoaded", () => {
 
+	// Toggle the paper size
+	document.getElementById("paper_size").addEventListener("change",(e) => {
+		const sheets = document.getElementById("sheets");
+		sheets.classList.remove("a4");
+		sheets.classList.remove("letter");
+		sheets.classList.add(e.target.value);
+	});
+
 	document.getElementById("network_name").addEventListener("input",(e) => {
 		generate_qr();
 	});

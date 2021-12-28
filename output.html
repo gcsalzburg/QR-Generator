@@ -10,7 +10,18 @@
 	</head>
 
 	<body>
-		<div class="sheets">
+		<nav>
+			<form>
+				<label for="paper_size">Paper size:</label>
+				<select id="paper_size" name="paper_size" class="paper_size">
+					<option value="a4" selected="selected">A4</option>
+					<option value="letter">Letter</option>
+				</select>
+				·
+				<button type="submit">🖨️ Print this page!</button>
+			</form>
+		</nav>
+		<div id="sheets" class="sheets a4">
 			<div class="sheet">
 				<header>
 					<img src="include/img/logo_black_square.png" class="logo">
